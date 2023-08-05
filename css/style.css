@@ -67,7 +67,6 @@ body {
 .game {
   width: 560px;
   height: 450px;
-  
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -138,6 +137,7 @@ body {
 
 .footer-container {
   display: flex;
+  margin-right: 20px;
 }
 
 .year {
@@ -166,4 +166,131 @@ body {
 
 .current-score {
   text-align: center;
+}
+
+@media (max-width: 810px) {
+  .title {
+    width: 80%;
+  }
+
+  .newgame {
+    width: 20%;
+    margin: 0 20px;
+  }
+
+  .header h1, .header h2 {
+    letter-spacing: 2px;
+    word-spacing: 5px;
+  }
+  
+  .header h2 {
+    padding-bottom: 15px;
+  }
+
+  .game {
+    width: 420px;
+    height: 338px;
+  }
+  
+  .last-ten {
+    width: 20%;
+    margin: 10px;
+  }
+  
+  .container {
+    width: 80%;
+  }
+  
+  .card {
+    height: 75px;
+    width: 75px;
+  }
+   
+  .back {
+    height: 71px;
+    width: 71px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .title {
+    width: 100%;
+  }
+
+  .newgame {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .newgame-btn {
+    display: block;
+    width: 112px;
+    margin: 0 auto;
+  }
+
+  .last-ten {
+    display: none;
+  }
+  
+  .container {
+    width: 100%;
+  }
+
+  .year {
+    padding-top: 6px;
+    font-size: 16px;
+  }
+  
+  .github {
+    padding-left: 40px;
+    padding-top: 6px;
+    background-position-y: 2px;
+    background-size: 30px 30px;
+  }
+  
+  .github a {
+    font-size: 18px;
+  }
+  
+  .rsschool img {
+    height: 30px;
+  }
+}
+
+@media (max-width: 475px) {
+  .game {
+    width: 300px;
+    height: 380px;
+  }
+  
+  .card {
+    height: 65px;
+    width: 65px;
+  }
+   
+  .back {
+    height: 61px;
+    width: 61px;
+  }
+
+  .front {
+    width: 40px;
+    height: 40px;
+    left: calc(50% - 20px);
+    top: calc(50% - 20px);
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-container {
+    margin-bottom: 15px;
+  }
 }
