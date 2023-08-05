@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* alata-regular - latin */
+@font-face {
+  font-family: 'Alata';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/alata-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/alata-v7-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
+  height: 100vh;
+  background: #000000;
+  background: url('../img/wallpaper.jpg');
+  font-family: 'Alata';
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.header {
+  display: flex;
+  border-bottom: 2px solid #ffffff;
+}
+
+.title {
+  width: 85%;
+}
+
+.newgame {
+  width: 15%;
+  margin: 0 25px;
+  padding: 30px 0;
+}
+
+.newgame-btn {
+  display: inline-block;
+  padding: 5px 15px;
+  border: 1px white solid;
+  border-radius: 2px;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+.header h1, .header h2 {
+  text-align: center;
+  letter-spacing: 10px;
+  word-spacing: 25px;
+  text-shadow: 1px 1px 3px rgb(104, 29, 29);
+}
+
+.header h2 {
+  padding-bottom: 15px;
+}
+
+.main {
+  flex: 1 1 auto;
+  display: flex;
+}
+
+.game {
+  width: 560px;
+  height: 450px;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 25px auto;
+  perspective: 1000px;  
+}
+
+.last-ten {
+  width: 15%;
+  margin: 25px;
+}
+
+.container {
+  width: 85%;
+}
+
+.card {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  background: rgb(14, 82, 159);
+  border: 2px solid grey;
+  box-shadow: 0px 0px 3px #ffffff;
+  cursor: pointer;
+}
+
+.card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+  }
+
+  .card.flip {
+    transform: rotateY(180deg);
+  }
+
+ .back {
+  height: 96px;
+  width: 96px;
+  position: absolute;
+  background: rgb(14, 82, 159);
+}
+
+.front {
+  position: absolute;
+  background: rgb(14, 82, 159);
+  left: calc(50% - 35px);
+  top: calc(50% - 35px);
+  transform: rotateY(180deg);
+}
+
+.back {
+  backface-visibility: hidden;
+}
+
+.footer{
+  border-top: 2px solid #000000;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px;   
+   
+  color: black;
+  filter: invert(1);
+}
+
+.footer-container {
+  display: flex;
+}
+
+.year {
+  padding-top: 18px;
+  font-size: 18px;
+}
+
+.github {
+  margin-left: 20px;
+  padding-top: 12px;
+  padding-left: 60px;
+  background-image: url(../img/25231.png);
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+}
+
+.github a {
+  font-size: 26px;
+  color: black;
+  text-decoration: none;
+}
+
+.rsschool img {
+  height: 50px;
+}
+
+.current-score {
+  text-align: center;
+}
